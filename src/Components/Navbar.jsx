@@ -1,4 +1,5 @@
-import logo from '../assets/logo dark.png'
+import { GoArrowUpRight } from "react-icons/go";
+import logo from "../assets/logo dark.png";
 const Navbar = () => {
   return (
     <header>
@@ -39,11 +40,10 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <img className='hover:cursor-pointer w-32 h-8' src={logo} alt="" />
-    
+          <img className="hover:cursor-pointer w-32 h-8" src={logo} alt="" />
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 text-base">
             <li>
               <a>Home</a>
             </li>
@@ -59,8 +59,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn btn-outline hover:bg-base-300 hover:text-[#343268]  border-[#343268]">
-            Appointment
+          <a className="btn btn-outline hover:bg-base-300 hover:text-[#343268] text-base border-[#343268]">
+            Appointment <GoArrowUpRight className="text-xl font-bold"/>
           </a>
         </div>
       </nav>

@@ -1,7 +1,10 @@
+import Appointment from "./Components/Appointment";
+import FAQ from "./Components/FAQ";
 import Features from "./Components/Features";
 import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
+import WhoWeAre from "./Components/WhoWeAre";
 
 function App() {
   0;
@@ -9,11 +12,14 @@ function App() {
   return (
     <>
       <main>
-        <div className="max-w-7xl mx-auto">
+        <section className="max-w-7xl mx-auto bg-[#FBFBFB]">
           <Navbar />
           <Hero />
           <Features />
-        </div>
+          <WhoWeAre />
+          <FAQ />
+          <Appointment />
+        </section>
         <Footer />
       </main>
     </>
