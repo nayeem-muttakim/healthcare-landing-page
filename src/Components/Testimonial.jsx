@@ -1,7 +1,7 @@
 const Testimonial = () => {
   return (
     <section className="my-20 grid gap-10">
-      <div className="badge badge-outline text-lg px-4 py-4">Testimonial</div>
+      <div className="badge badge-outline text-lg font-semibold px-4 py-4">Testimonial</div>
       <h1 className="text-4xl font-semibold">What they say about us</h1>
       {/* testimonials */}
       <div className="grid grid-cols-3">
