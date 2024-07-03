@@ -4,6 +4,7 @@ import Features from "./Components/Features";
 import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
+import Testimonial from "./Components/Testimonial";
 import WhoWeAre from "./Components/WhoWeAre";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Hero />
           <Features />
           <WhoWeAre />
+          <Testimonial />
           <FAQ />
           <Appointment />
         </section>
