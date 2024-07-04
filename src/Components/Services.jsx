@@ -30,7 +30,15 @@ const Services = () => {
         </div>
         <div className="relative">
           <img src={img1} alt="" className="rounded-3xl " />
-          <div className="card bg-[#020043] absolute bottom-6 left-6 text-white w-[380px] ">
+          <div
+            style={{
+              background: "rgba( 11, 10, 103, 0.6 )",
+              boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+              backdropFilter: "blur( 1.5px )",
+              borderRadius: "10px",
+            }}
+            className="card absolute bottom-6 left-6 text-white w-[380px] "
+          >
             <div className="card-body">
               <h2 className="card-title">Advanced Technology</h2>
 
@@ -48,7 +56,15 @@ const Services = () => {
         </div>
         <div className="relative">
           <img src={img2} alt="" className="rounded-3xl" />
-          <div className="card bg-[#020043] absolute bottom-6 left-6 text-white w-[380px] ">
+          <div
+            style={{
+              background: "rgba( 11, 10, 103, 0.6 )",
+              boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+              backdropFilter: "blur( 1.5px )",
+              borderRadius: "10px",
+            }}
+            className="card absolute bottom-6 left-6 text-white w-[380px] "
+          >
             <div className="card-body">
               <h2 className="card-title">Online Doctor Meet</h2>
 
@@ -66,7 +82,15 @@ const Services = () => {
         </div>
         <div className="relative ">
           <img src={img3} alt="" className="rounded-3xl" />
-          <div className="card bg-[#020043] absolute bottom-6 left-6 text-white w-[380px] ">
+          <div
+            style={{
+              background: "rgba( 11, 10, 103, 0.6 )",
+              boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+              backdropFilter: "blur( 1.5px )",
+              borderRadius: "10px",
+            }}
+            className="card absolute bottom-6 left-6 text-white w-[380px]"
+          >
             <div className="card-body">
               <h2 className="card-title">Consultancy your health</h2>
 
