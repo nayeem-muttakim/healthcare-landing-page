@@ -6,7 +6,7 @@ import { GoArrowUpRight } from "react-icons/go";
 const Services = () => {
   return (
     <section className="bg-[#FFFFF5] my-40">
-      <div className="grid grid-cols-2 gap-16">
+      <div className="grid lg:grid-cols-2 gap-16">
         {/* text */}
         <div>
           <div className="flex flex-col gap-4">

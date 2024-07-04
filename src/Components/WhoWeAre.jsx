@@ -1,11 +1,21 @@
 import { GoArrowUpRight } from "react-icons/go";
 import solutionImg from "../assets/Rectangle 24.png";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 const WhoWeAre = () => {
+  useGSAP(() => {
+    gsap.from(".wwe", {
+      bottom: 100,
+      duration: 1,
+      yoyo: true,
+      ease: "power2.inOut",
+    });
+  }, []);
   return (
     <section className="my-32">
-      <div className="flex justify-between">
+      <div  className="flex flex-col lg:flex-row justify-between">
         {/* text */}
-        <div>
+        <div className="wwe">
           <div className="flex flex-col gap-4">
             <div className="badge badge-outline badge-lg text-lg font-medium px-6 py-5 ">
               Who we are
@@ -30,7 +40,7 @@ const WhoWeAre = () => {
           </a>
         </div>
         {/* image */}
-        <div className="relative">
+        <div className="relative wwe">
           <img src={solutionImg} alt="" />
           <div className="card bg-[#343268] absolute z-10 -bottom-7 -left-[95px] w-[395px] h-52 shadow-xl">
             <div className="card-body text-white">

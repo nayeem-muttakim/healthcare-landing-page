@@ -1,14 +1,43 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { FaStar } from "react-icons/fa";
 
 const Features = () => {
+  useGSAP(() => {
+    gsap.to("#heading", {
+      opacity: 1,
+      y: 0,
+      ease: "power2.in",
+      duration: 0.7,
+    
+    });
+    gsap.to(".cards", {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      yoyo: true,
+      ease: "power2.in",
+      duration: 0.7,
+      stagger: {amount:0.1,from:'center'},  scrollTrigger:{
+        trigger:".cards",
+        start:"top top",
+        end:"top 20%",
+        scrub:true
+      }
+    });
+  }, []);
+
   return (
     <section className="my-20  text-[#020043]">
-      <h1 className="text-6xl relative top-12 text-center font-semibold">
+      <h1
+        id="heading"
+        className="text-6xl relative top-12 text-center font-semibold opacity-0 translate-y-20"
+      >
         Comprehensive Care <br /> for Every Patient
       </h1>
       {/* cards */}
-      <div className="grid grid-cols-5 items-end">
-        <div className="card bg-base-100 w-56 shadow">
+      <div className="grid lg:grid-cols-5 gap-2 items-end">
+        <div className="card bg-base-100 cards w-56 shadow">
           <div className="card-body">
             <h2 className="card-title text-5xl font-semibold">90%</h2>
             <p>Patient satisfaction rate, reflecting our commitment.</p>
@@ -36,7 +65,7 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-100 w-56 row shadow">
+        <div className="card bg-base-100 cards w-56 row shadow">
           <div className="card-body">
             <h2 className="card-title text-5xl font-semibold">500+</h2>
             <p>Board-certified doctors</p>
@@ -136,7 +165,7 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-100 w-56 shadow">
+        <div className="card bg-base-100 cards w-56 shadow">
           <div className="card-body">
             <h2 className="card-title text-5xl font-semibold">
               4.8 <FaStar className="text-[#FFE03D]" />
@@ -166,7 +195,7 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-100 w-56 shadow">
+        <div className="card bg-base-100 cards w-56 shadow">
           <div className="card-body">
             <h2 className="card-title text-5xl font-semibold">$5000</h2>
             <p>Money Spend for poor patient</p>
@@ -179,20 +208,20 @@ const Features = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M45.6459 24.9866C43.3837 21.0675 50.4576 12.7523 61.4453 6.407C72.4278 0.0667748 83.1695 -1.90307 85.4315 2.01599C86.6832 4.18583 87.9347 6.35568 89.1915 8.53064C91.4538 12.4446 84.3799 20.7598 73.3922 27.1051C62.4045 33.4453 51.668 35.4152 49.4059 31.5012C48.1544 29.3263 46.8976 27.1564 45.6459 24.9866Z"
                   fill="#FE9923"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M61.4453 6.407C72.4278 0.0667748 83.1695 -1.90307 85.4315 2.01599C87.6938 5.92993 80.6199 14.2451 69.6322 20.5904C58.6445 26.9358 47.9082 28.9005 45.6459 24.9866C43.3837 21.0675 50.4576 12.7523 61.4453 6.407Z"
                   fill="#FECD3D"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M63.3587 9.72076C72.0996 4.67825 80.1584 2.27772 81.3638 4.36026C82.5693 6.44809 76.46 12.2292 67.7188 17.2767C58.9779 22.3243 50.914 24.725 49.7137 22.6372C48.5084 20.5495 54.6178 14.7684 63.3587 9.72076Z"
                   fill="#FEA832"
                 />
@@ -201,20 +230,20 @@ const Features = () => {
                   fill="#C85929"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M43.9737 41.9914C46.2358 38.0774 39.1621 29.7571 28.1744 23.4169C17.1919 17.0716 6.45021 15.1068 4.18813 19.0208C2.93645 21.1906 1.68495 23.3656 0.428156 25.5354C-1.83411 29.4494 5.23981 37.7697 16.2275 44.1099C27.2152 50.4552 37.9517 52.4199 40.2138 48.506C41.4704 46.3363 42.7219 44.1612 43.9737 41.9914Z"
                   fill="#FE9923"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M28.1744 23.4169C17.1919 17.0716 6.45022 15.1068 4.18814 19.0208C1.93117 22.9398 9.0049 31.255 19.9875 37.5952C30.9751 43.9406 41.7168 45.9053 43.9738 41.9914C46.236 38.0774 39.1621 29.7571 28.1744 23.4169Z"
                   fill="#FECD3D"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M26.2609 26.7307C17.5251 21.6831 9.4612 19.2825 8.25573 21.3702C7.05026 23.4529 13.1596 29.2391 21.9006 34.2815C30.6415 39.3291 38.7053 41.7296 39.9108 39.642C41.1112 37.5594 35.0018 31.7783 26.2609 26.7307Z"
                   fill="#FEA832"
                 />
@@ -223,20 +252,20 @@ const Features = () => {
                   fill="#C85929"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M42.3886 63.4693C40.1314 59.5554 47.2002 51.2402 58.1879 44.8949C69.1756 38.5546 79.9121 36.5848 82.1742 40.4987C83.431 42.6737 84.6827 44.8435 85.9342 47.0134C88.1964 50.9324 81.1225 59.2476 70.14 65.593C59.1523 71.9332 48.4107 73.903 46.1486 69.984C44.8971 67.8141 43.6454 65.6443 42.3886 63.4693Z"
                   fill="#FE9923"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M58.1879 44.8947C69.1756 38.5545 79.9121 36.5847 82.1742 40.4986C84.4365 44.4177 77.3626 52.7329 66.3749 59.0782C55.3923 65.4184 44.6509 67.3883 42.3886 63.4692C40.1314 59.5554 47.2002 51.2403 58.1879 44.8947Z"
                   fill="#FECD3D"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M60.1014 48.2086C68.8423 43.161 76.9062 40.7654 78.1065 42.8481C79.312 44.9358 73.2026 50.7169 64.4615 55.7646C55.7206 60.8071 47.6618 63.2076 46.4564 61.1251C45.2511 59.0372 51.3604 53.2561 60.1014 48.2086Z"
                   fill="#FEA832"
                 />
@@ -260,7 +289,7 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-100 w-56 shadow">
+        <div className="card bg-base-100 cards w-56 shadow">
           <div className="card-body">
             <h2 className="card-title text-5xl font-semibold">50+</h2>
             <p>Free lesson video for patient</p>

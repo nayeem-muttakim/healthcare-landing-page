@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+    .cards{
+        @apply opacity-0 translate-y-10 scale-50
+    }
+}
