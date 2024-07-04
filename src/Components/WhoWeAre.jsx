@@ -2,8 +2,8 @@ import { GoArrowUpRight } from "react-icons/go";
 import solutionImg from "../assets/Rectangle 24.png";
 const WhoWeAre = () => {
   return (
-    <section>
-      <div className="flex justify-between my-10">
+    <section className="my-32">
+      <div className="flex justify-between">
         {/* text */}
         <div>
           <div className="flex flex-col gap-4">
